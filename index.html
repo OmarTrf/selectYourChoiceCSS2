@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title></title>
+</head>
+<body>
+	<div id="checkboxs">
+		
+	</div>
+<script>
+	function new_checkbox(i){
+		var new_check = document.createElement("div");
+		new_check.classList.add("checkbox");
+		var new_input = document.createElement("input");
+		new_input.setAttribute("type","checkbox");
+		new_input.setAttribute("id","id"+i);
+		new_check.appendChild(new_input);
+		var new_label = document.createElement("label");
+		new_label.setAttribute("for","id"+i);
+		new_label.innerHTML = "Option "+(i+1);
+		new_check.appendChild(new_label);
+		document.querySelector("#checkboxs").appendChild(new_check);
+	}
+	for(var i=0;i<8;i++){
+		new_checkbox(i);
+	}
+</script>
+</body>
+</html>
